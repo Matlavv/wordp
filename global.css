@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Couleur de background par défaut pour toute l'application */
+* {
+    background-color: #252c4a;
+}
+
+/* Style pour React Native */
+.bg-default {
+    background-color: #252c4a;
+}

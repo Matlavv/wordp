@@ -1,5 +1,10 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
+import FinishedPhase from '../../components/FinishedPhase';
+import GameHeader from '../../components/GameHeader';
+import PlayingPhase from '../../components/PlayingPhase';
+import ResultsPhase from '../../components/ResultsPhase';
+import WaitingPhase from '../../components/WaitingPhase';
 import { useGame } from '../../contexts/GameContext';
 
 function formatTime(seconds: number): string {
@@ -103,246 +108,45 @@ export default function GameScreen() {
     return (
         <SafeAreaView className={`flex-1 ${currentTeam?.color || 'bg-dark-blue'}`}>
             <ScrollView className="flex-1 px-6 mt-6 mb-6">
-                {/* Round */}
-                <Text className="text-center text-2xl font-bold mt-8 mb-4 text-gray-800">
-                    Round {state.currentRound}/{state.totalRounds}
-                </Text>
-
-                {/* Nom de l'équipe */}
-                <Text className="text-center text-3xl font-bold mb-4 text-gray-800">
-                    {currentTeam?.name}
-                </Text>
-
-                {/* Score global des équipes */}
-                <View className="flex-row justify-center mb-6">
-                    {state.teams.map((team) => (
-                        <View key={team.id} className="mx-2 p-2 bg-white/20 rounded-lg">
-                            <Text className="text-center text-sm font-medium text-gray-800">
-                                {team.name}
-                            </Text>
-                            <Text className="text-center text-lg font-bold text-gray-800">
-                                {team.score} pts
-                            </Text>
-                        </View>
-                    ))}
-                </View>
-
-                {/* Barre pointillée */}
-                <View className="border-b-2 border-dashed border-gray-600 mb-6" />
-
-                {/* Timer */}
-                <Text
-                    className={`text-center text-4xl font-bold mb-6 ${
-                        state.timeRemaining <= 10
-                            ? 'text-red-600'
-                            : state.timeRemaining <= 30
-                              ? 'text-orange-600'
-                              : 'text-green-600'
-                    }`}
-                >
-                    {formatTime(state.timeRemaining)}
-                </Text>
+                <GameHeader
+                    currentRound={state.currentRound}
+                    totalRounds={state.totalRounds}
+                    currentTeamName={currentTeam?.name || ''}
+                    teams={state.teams}
+                    timeRemaining={state.timeRemaining}
+                    formatTime={formatTime}
+                />
 
                 {/* Composant dynamique selon la phase */}
                 {state.gamePhase === 'waiting' && (
-                    <View className="items-center">
-                        <Text className="text-center text-xl font-semibold mb-6 text-gray-800">
-                            À l&apos;équipe &quot;{currentTeam?.name}&quot; de jouer !
-                        </Text>
-                        <Text className="text-center text-lg mb-8 text-gray-700">
-                            Passe le téléphone à une autre équipe
-                        </Text>
-                        <TouchableOpacity
-                            onPress={startRound}
-                            className="bg-green-600 px-8 py-4 rounded-2xl"
-                        >
-                            <Text className="text-white text-xl font-bold">Jouer</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <WaitingPhase
+                        currentTeamName={currentTeam?.name || ''}
+                        onStartRound={startRound}
+                    />
                 )}
 
                 {state.gamePhase === 'playing' && state.currentQuestion && (
-                    <View>
-                        {/* Question */}
-                        <View className="bg-white/30 rounded-2xl p-6 mb-6">
-                            <Text className="text-center text-xl font-bold mb-2 text-gray-800">
-                                {state.currentQuestion.theme}
-                            </Text>
-                        </View>
-
-                        {/* Réponses */}
-                        <View className="mb-6">
-                            {state.currentQuestion.answers.map((answer, index) => (
-                                <TouchableOpacity
-                                    key={index}
-                                    onPress={() => selectAnswer(index)}
-                                    disabled={!state.isTimerActive}
-                                    className={`p-4 mb-3 rounded-xl border-2 ${
-                                        state.selectedAnswers[index]
-                                            ? 'bg-blue-600 border-blue-700'
-                                            : 'bg-white/50 border-gray-400'
-                                    }`}
-                                >
-                                    <View className="flex-row justify-between items-center">
-                                        <Text
-                                            className={`flex-1 font-medium ${
-                                                state.selectedAnswers[index]
-                                                    ? 'text-white'
-                                                    : 'text-gray-800'
-                                            }`}
-                                        >
-                                            {answer.text}
-                                        </Text>
-                                        <View className={`ml-3 px-2`}>
-                                            <Text className="text-gray-500 text-base font-bold">
-                                                {answer.isTrap ? '-5' : `+${answer.points}`}
-                                            </Text>
-                                        </View>
-                                    </View>
-                                </TouchableOpacity>
-                            ))}
-                        </View>
-
-                        {/* Bouton valider */}
-                        {state.selectedAnswers.some(Boolean) && state.isTimerActive && (
-                            <TouchableOpacity
-                                onPress={submitAnswers}
-                                className="bg-blue-600 p-4 rounded-2xl mb-6"
-                            >
-                                <Text className="text-white text-center text-lg font-bold">
-                                    Valider les réponses
-                                </Text>
-                            </TouchableOpacity>
-                        )}
-                    </View>
+                    <PlayingPhase
+                        currentQuestion={state.currentQuestion}
+                        selectedAnswers={state.selectedAnswers}
+                        isTimerActive={state.isTimerActive}
+                        onSelectAnswer={selectAnswer}
+                        onSubmitAnswers={submitAnswers}
+                    />
                 )}
 
                 {state.gamePhase === 'results' && state.currentQuestion && (
-                    <View>
-                        <Text className="text-center text-2xl font-bold mb-6 text-gray-800">
-                            Résultats
-                        </Text>
-
-                        {/* Score de ce round */}
-                        <View className="bg-white/30 rounded-2xl p-6 mb-6">
-                            <Text className="text-center text-lg text-gray-800">
-                                Points gagnés ce round:
-                            </Text>
-                            <Text className="text-center text-3xl font-bold text-green-600">
-                                {calculateScore(
-                                    state.selectedAnswers,
-                                    state.currentQuestion.answers,
-                                    state.currentQuestion.difficulty,
-                                )}
-                            </Text>
-                        </View>
-
-                        {/* Corrections */}
-                        <View className="mb-6">
-                            <Text className="text-lg font-bold mb-4 text-gray-800">Réponses :</Text>
-                            {state.currentQuestion.answers.map((answer, index) => {
-                                const isSelected = state.selectedAnswers[index];
-                                const isCorrect = answer.isCorrect;
-                                const isTrap = answer.isTrap;
-
-                                let bgColor = 'bg-white/30';
-                                let textColor = 'text-gray-800';
-                                let icon = '';
-
-                                if (isSelected) {
-                                    if (isTrap) {
-                                        bgColor = 'bg-red-500';
-                                        textColor = 'text-white';
-                                        icon = '❌ ';
-                                    } else if (isCorrect) {
-                                        bgColor = 'bg-green-500';
-                                        textColor = 'text-white';
-                                        icon = '✅ ';
-                                    } else {
-                                        bgColor = 'bg-gray-500';
-                                        textColor = 'text-white';
-                                        icon = '⭕ ';
-                                    }
-                                }
-
-                                return (
-                                    <TouchableOpacity
-                                        key={index}
-                                        onPress={() => selectAnswer(index)}
-                                        className={`p-3 mb-2 rounded-lg ${bgColor} border-2 ${
-                                            isSelected ? 'border-blue-400' : 'border-transparent'
-                                        }`}
-                                    >
-                                        <View className="flex-row justify-between items-center">
-                                            <Text className={`${textColor} font-medium flex-1`}>
-                                                {icon}
-                                                {answer.text}
-                                            </Text>
-                                            <View className="ml-3">
-                                                <Text className={`${textColor} text-sm font-bold`}>
-                                                    {answer.isTrap ? '-5' : `+${answer.points}`} pts
-                                                </Text>
-                                            </View>
-                                        </View>
-                                    </TouchableOpacity>
-                                );
-                            })}
-                        </View>
-
-                        <TouchableOpacity
-                            onPress={nextTeam}
-                            className="bg-blue-600 p-4 rounded-2xl mb-4"
-                        >
-                            <Text className="text-white text-center text-lg font-bold">
-                                Équipe suivante
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
+                    <ResultsPhase
+                        currentQuestion={state.currentQuestion}
+                        selectedAnswers={state.selectedAnswers}
+                        calculateScore={calculateScore}
+                        onSelectAnswer={selectAnswer}
+                        onNextTeam={nextTeam}
+                    />
                 )}
 
                 {state.gamePhase === 'finished' && (
-                    <View className="items-center">
-                        <Text className="text-center text-3xl font-bold mb-8 text-gray-800">
-                            Fin de la partie !
-                        </Text>
-
-                        {/* Classement final */}
-                        <View className="w-full mb-8">
-                            <Text className="text-xl font-bold mb-4 text-gray-800">
-                                Classement final:
-                            </Text>
-                            {[...state.teams]
-                                .sort((a, b) => b.score - a.score)
-                                .map((team, index) => (
-                                    <View
-                                        key={team.id}
-                                        className="flex-row justify-between items-center p-4 mb-2 bg-white/30 rounded-lg"
-                                    >
-                                        <View className="flex-row items-center">
-                                            <Text className="text-lg font-bold mr-3 text-gray-800">
-                                                {index + 1}.
-                                            </Text>
-                                            <Text className="text-lg font-medium text-gray-800">
-                                                {team.name}
-                                            </Text>
-                                        </View>
-                                        <Text className="text-lg font-bold text-gray-800">
-                                            {team.score} pts
-                                        </Text>
-                                    </View>
-                                ))}
-                        </View>
-                        <View className="mt-6">
-                            <TouchableOpacity
-                                onPress={resetGame}
-                                className="bg-green-600 px-8 py-4 rounded-2xl"
-                            >
-                                <Text className="text-white text-xl font-bold text-center">
-                                    Rejouer
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
+                    <FinishedPhase teams={state.teams} onResetGame={resetGame} />
                 )}
             </ScrollView>
         </SafeAreaView>

@@ -25,10 +25,12 @@ type GameAction =
     | { type: 'SET_TEAMS'; payload: Team[] }
     | { type: 'SET_ROUNDS'; payload: number }
     | { type: 'START_GAME' }
+    | { type: 'START_SOLO_GAME'; payload: number }
     | { type: 'START_ROUND' }
     | { type: 'SELECT_ANSWER'; payload: number }
     | { type: 'SUBMIT_ANSWERS' }
     | { type: 'NEXT_TEAM' }
+    | { type: 'NEXT_SOLO_ROUND' }
     | { type: 'START_TIMER' }
     | { type: 'TICK_TIMER' }
     | { type: 'STOP_TIMER' }
@@ -65,6 +67,42 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 currentQuestion: getRandomQuestion(),
             };
 
+        case 'START_SOLO_GAME':
+            const soloTeam = [
+                {
+                    id: 'solo-player',
+                    name: 'Joueur Solo',
+                    color: 'bg-purple-500',
+                    score: 0,
+                },
+            ];
+            return {
+                ...state,
+                teams: soloTeam,
+                totalRounds: action.payload,
+                gamePhase: 'waiting',
+                currentRound: 1,
+                currentTeamIndex: 0,
+                currentQuestion: getRandomQuestion(),
+            };
+
+        case 'NEXT_SOLO_ROUND':
+            const nextSoloRound = state.currentRound + 1;
+
+            if (nextSoloRound > state.totalRounds) {
+                return { ...state, gamePhase: 'finished' };
+            }
+
+            return {
+                ...state,
+                currentRound: nextSoloRound,
+                gamePhase: 'waiting',
+                currentQuestion: getRandomQuestion(),
+                selectedAnswers: new Array(9).fill(false),
+                timeRemaining: 60,
+                isTimerActive: false,
+            };
+
         case 'START_ROUND':
             return {
                 ...state,
@@ -84,16 +122,16 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         case 'NEXT_TEAM':
             const nextTeamIndex = (state.currentTeamIndex + 1) % state.teams.length;
             const isNewRound = nextTeamIndex === 0;
-            const newRound = isNewRound ? state.currentRound + 1 : state.currentRound;
+            const nextMultiRound = isNewRound ? state.currentRound + 1 : state.currentRound;
 
-            if (newRound > state.totalRounds) {
+            if (nextMultiRound > state.totalRounds) {
                 return { ...state, gamePhase: 'finished' };
             }
 
             return {
                 ...state,
                 currentTeamIndex: nextTeamIndex,
-                currentRound: newRound,
+                currentRound: nextMultiRound,
                 gamePhase: 'waiting',
                 currentQuestion: getRandomQuestion(),
                 selectedAnswers: new Array(9).fill(false),

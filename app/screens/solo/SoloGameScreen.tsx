@@ -1,8 +1,11 @@
 import { router } from 'expo-router';
-import React from 'react';
+import React, { useRef } from 'react';
 import { SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import GameHeader from '../../../components/GameHeader';
-import PlayingPhase from '../../../components/PlayingPhase';
+import SoloGameHeader from '../../../components/SoloGameHeader';
+import SoloPlayingPhase from '../../../components/SoloPlayingPhase';
+import SoloResultsPhase from '../../../components/SoloResultsPhase';
+import SoloWaitingPhase from '../../../components/SoloWaitingPhase';
 import { useGame } from '../../../contexts/GameContext';
 
 function formatTime(seconds: number): string {
@@ -11,10 +14,10 @@ function formatTime(seconds: number): string {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
-function calculateScore(selectedAnswers: boolean[], answers: any[], difficulty: number): number {
+function calculateSoloScore(foundAnswers: string[], answers: any[]): number {
     let score = 0;
-    selectedAnswers.forEach((isSelected, index) => {
-        if (isSelected && answers[index]) {
+    foundAnswers.forEach((foundAnswer, index) => {
+        if (foundAnswer !== '' && answers[index]) {
             const answer = answers[index];
             if (answer.isTrap) {
                 score += answer.points;
@@ -29,72 +32,37 @@ function calculateScore(selectedAnswers: boolean[], answers: any[], difficulty: 
 export default function SoloGameScreen() {
     const { state, dispatch } = useGame();
     const currentTeam = state.teams[0];
+    const scrollViewRef = useRef<ScrollView>(null);
 
     const startRound = () => {
         dispatch({ type: 'START_ROUND' });
         dispatch({ type: 'START_TIMER' });
     };
 
-    const selectAnswer = (index: number) => {
-        if (
-            (state.gamePhase === 'playing' && state.isTimerActive) ||
-            state.gamePhase === 'results'
-        ) {
-            dispatch({ type: 'SELECT_ANSWER', payload: index });
-
-            // Si on est en phase de résultats, recalculer et mettre à jour le score immédiatement
-            if (state.gamePhase === 'results' && state.currentQuestion) {
-                // Calculer le nouveau tableau de sélections
-                const newSelectedAnswers = [...state.selectedAnswers];
-                newSelectedAnswers[index] = !newSelectedAnswers[index];
-
-                // Calculer le nouveau score basé sur les nouvelles sélections
-                const newPoints = calculateScore(
-                    newSelectedAnswers,
-                    state.currentQuestion.answers,
-                    state.currentQuestion.difficulty,
-                );
-
-                // Calculer l'ancien score pour cette question
-                const oldPoints = calculateScore(
-                    state.selectedAnswers,
-                    state.currentQuestion.answers,
-                    state.currentQuestion.difficulty,
-                );
-
-                // Mettre à jour le score total en ajustant la différence
-                const scoreDifference = newPoints - oldPoints;
-                dispatch({
-                    type: 'SET_TEAM_SCORE',
-                    payload: {
-                        teamId: currentTeam.id,
-                        score: currentTeam.score + scoreDifference,
-                    },
-                });
-            }
-        }
+    const submitAnswer = (answer: string) => {
+        dispatch({ type: 'SUBMIT_ANSWER', payload: answer });
     };
 
-    const submitAnswers = React.useCallback(() => {
+    const scrollToBottom = () => {
+        setTimeout(() => {
+            scrollViewRef.current?.scrollToEnd({ animated: true });
+        }, 100);
+    };
+
+    const submitAllAnswers = React.useCallback(() => {
         if (state.currentQuestion) {
-            const points = calculateScore(
-                state.selectedAnswers,
-                state.currentQuestion.answers,
-                state.currentQuestion.difficulty,
-            );
+            const points = calculateSoloScore(state.foundAnswers, state.currentQuestion.answers);
             dispatch({ type: 'UPDATE_SCORE', payload: { teamId: currentTeam.id, points } });
         }
         dispatch({ type: 'SUBMIT_ANSWERS' });
-    }, [state.currentQuestion, state.selectedAnswers, currentTeam.id, dispatch]);
+    }, [state.currentQuestion, state.foundAnswers, currentTeam.id, dispatch]);
 
     const nextRound = () => {
-        // En mode solo, utiliser l'action spécifique pour passer au round suivant
         if (state.currentRound >= state.totalRounds) {
             // Si c'est le dernier round, finir la partie
-            router.push('/');
+            dispatch({ type: 'NEXT_SOLO_ROUND' });
             return;
         }
-
         // Passer au round suivant
         dispatch({ type: 'NEXT_SOLO_ROUND' });
     };
@@ -107,161 +75,105 @@ export default function SoloGameScreen() {
     // Gestion automatique de la soumission quand le timer arrive à 0
     React.useEffect(() => {
         if (state.timeRemaining === 0 && state.gamePhase === 'playing') {
-            submitAnswers();
+            submitAllAnswers();
         }
-    }, [state.timeRemaining, state.gamePhase, submitAnswers]);
+    }, [state.timeRemaining, state.gamePhase, submitAllAnswers]);
 
     return (
-        <SafeAreaView className="flex-1 bg-blue-200">
-            <ScrollView className="flex-1 px-6 mt-6 mb-6">
-                <GameHeader
-                    currentRound={state.currentRound}
-                    totalRounds={state.totalRounds}
-                    currentTeamName={currentTeam?.name || ''}
-                    teams={state.teams}
-                    timeRemaining={state.timeRemaining}
-                    formatTime={formatTime}
-                />
-
-                {/* Composant dynamique selon la phase */}
-                {state.gamePhase === 'waiting' && (
-                    <View>
-                        <View className="bg-white/30 rounded-2xl p-6 mb-6">
-                            <Text className="text-center text-xl font-bold mb-4 text-gray-800">
-                                🎮 Mode Solo
-                            </Text>
-                            <Text className="text-center text-lg text-gray-800 mb-4">
-                                Prêt pour le round {state.currentRound} ?
-                            </Text>
-                        </View>
-
-                        <TouchableOpacity
-                            onPress={startRound}
-                            className="bg-blue-600 p-6 rounded-2xl mb-6"
-                        >
-                            <Text className="text-white text-center text-xl font-bold">
-                                Commencer le round
-                            </Text>
-                        </TouchableOpacity>
+        <SafeAreaView className="flex-1 bg-purple-200">
+            <ScrollView
+                ref={scrollViewRef}
+                className="flex-1"
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ flexGrow: 1 }}
+                keyboardShouldPersistTaps="handled"
+            >
+                {/* Header affiché dans toutes les phases sauf playing */}
+                {state.gamePhase !== 'playing' && (
+                    <View className="px-6">
+                        <GameHeader
+                            currentRound={state.currentRound}
+                            totalRounds={state.totalRounds}
+                            currentTeamName={currentTeam?.name || ''}
+                            teams={state.teams}
+                            timeRemaining={state.timeRemaining}
+                            formatTime={formatTime}
+                        />
                     </View>
                 )}
 
-                {state.gamePhase === 'playing' && state.currentQuestion && (
-                    <PlayingPhase
-                        currentQuestion={state.currentQuestion}
-                        selectedAnswers={state.selectedAnswers}
-                        isTimerActive={state.isTimerActive}
-                        onSelectAnswer={selectAnswer}
-                        onSubmitAnswers={submitAnswers}
-                    />
-                )}
-
-                {state.gamePhase === 'results' && state.currentQuestion && (
-                    <View>
-                        <Text className="text-center text-2xl font-bold mb-6 text-gray-800">
-                            Résultats
-                        </Text>
-
-                        {/* Score de ce round */}
-                        <View className="bg-white/30 rounded-2xl p-6 mb-6">
-                            <Text className="text-center text-lg text-gray-800">
-                                Points gagnés ce round:
-                            </Text>
-                            <Text className="text-center text-3xl font-bold text-green-600">
-                                {calculateScore(
-                                    state.selectedAnswers,
-                                    state.currentQuestion.answers,
-                                    state.currentQuestion.difficulty,
-                                )}
-                            </Text>
-                        </View>
-
-                        {/* Corrections */}
-                        <View className="mb-6">
-                            <Text className="text-lg font-bold mb-4 text-gray-800">Réponses :</Text>
-                            {state.currentQuestion.answers.map((answer, index) => {
-                                const isSelected = state.selectedAnswers[index];
-                                const isCorrect = answer.isCorrect;
-                                const isTrap = answer.isTrap;
-
-                                let bgColor = 'bg-white/30';
-                                let textColor = 'text-gray-800';
-                                let icon = '';
-
-                                if (isSelected) {
-                                    if (isTrap) {
-                                        bgColor = 'bg-red-500';
-                                        textColor = 'text-white';
-                                        icon = '❌ ';
-                                    } else if (isCorrect) {
-                                        bgColor = 'bg-green-500';
-                                        textColor = 'text-white';
-                                        icon = '✅ ';
-                                    } else {
-                                        bgColor = 'bg-gray-500';
-                                        textColor = 'text-white';
-                                        icon = '⭕ ';
-                                    }
-                                }
-
-                                return (
-                                    <TouchableOpacity
-                                        key={index}
-                                        onPress={() => selectAnswer(index)}
-                                        className={`p-3 mb-2 rounded-lg ${bgColor} border-2 ${
-                                            isSelected ? 'border-blue-400' : 'border-transparent'
-                                        }`}
-                                    >
-                                        <View className="flex-row justify-between items-center">
-                                            <Text className={`${textColor} font-medium flex-1`}>
-                                                {icon}
-                                                {answer.text}
-                                            </Text>
-                                            <View className="ml-3">
-                                                <Text className={`${textColor} text-sm font-bold`}>
-                                                    {answer.isTrap ? '-5' : `+${answer.points}`} pts
-                                                </Text>
-                                            </View>
-                                        </View>
-                                    </TouchableOpacity>
-                                );
-                            })}
-                        </View>
-
-                        <TouchableOpacity
-                            onPress={nextRound}
-                            className="bg-blue-600 p-4 rounded-2xl mb-4"
-                        >
-                            <Text className="text-white text-center text-lg font-bold">
-                                {state.currentRound >= state.totalRounds
-                                    ? 'Terminer'
-                                    : 'Round suivant'}
-                            </Text>
-                        </TouchableOpacity>
+                {/* Header spécial pour la phase de jeu avec question et timer fixe */}
+                {state.gamePhase === 'playing' && (
+                    <View className="px-6">
+                        <SoloGameHeader
+                            currentRound={state.currentRound}
+                            totalRounds={state.totalRounds}
+                            currentTeamName={currentTeam?.name || ''}
+                            teams={state.teams}
+                            timeRemaining={state.timeRemaining}
+                            formatTime={formatTime}
+                            currentQuestion={state.currentQuestion || undefined}
+                            foundAnswers={state.foundAnswers}
+                        />
                     </View>
                 )}
 
-                {state.gamePhase === 'finished' && (
-                    <View>
-                        <View className="bg-white/30 rounded-2xl p-6 mb-6">
-                            <Text className="text-center text-3xl font-bold mb-4 text-gray-800">
-                                🎉 Partie terminée !
-                            </Text>
-                            <Text className="text-center text-2xl font-bold mb-6 text-gray-800">
-                                Score final : {currentTeam.score} points
-                            </Text>
-                        </View>
+                <View className="flex-1 px-6">
+                    {/* Composant dynamique selon la phase */}
+                    {state.gamePhase === 'waiting' && (
+                        <SoloWaitingPhase
+                            currentRound={state.currentRound}
+                            totalRounds={state.totalRounds}
+                            onStartRound={startRound}
+                        />
+                    )}
 
-                        <TouchableOpacity
-                            onPress={resetGame}
-                            className="bg-blue-600 p-6 rounded-2xl mb-6"
-                        >
-                            <Text className="text-white text-center text-xl font-bold">
-                                Retour au menu
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
-                )}
+                    {state.gamePhase === 'playing' && state.currentQuestion && (
+                        <SoloPlayingPhase
+                            currentQuestion={state.currentQuestion}
+                            foundAnswers={state.foundAnswers}
+                            isTimerActive={state.isTimerActive}
+                            onSubmitAnswer={submitAnswer}
+                            onSubmitAllAnswers={submitAllAnswers}
+                            onInputFocus={scrollToBottom}
+                        />
+                    )}
+
+                    {state.gamePhase === 'results' && state.currentQuestion && (
+                        <SoloResultsPhase
+                            currentQuestion={state.currentQuestion}
+                            foundAnswers={state.foundAnswers}
+                            calculateSoloScore={calculateSoloScore}
+                            onNextRound={nextRound}
+                            isLastRound={state.currentRound >= state.totalRounds}
+                        />
+                    )}
+
+                    {state.gamePhase === 'finished' && (
+                        <View>
+                            <View className="bg-white/30 rounded-2xl p-6 mb-6">
+                                <Text className="text-center text-3xl font-bold mb-4 text-gray-800">
+                                    🎉 Partie terminée !
+                                </Text>
+                                <Text className="text-center text-2xl font-bold mb-6 text-gray-800">
+                                    Score final : {currentTeam.score} points
+                                </Text>
+                                <Text className="text-center text-lg text-gray-700">
+                                    Merci d'avoir joué en mode solo !
+                                </Text>
+                            </View>
+
+                            <TouchableOpacity
+                                onPress={resetGame}
+                                className="bg-blue-600 p-6 rounded-2xl mb-6"
+                            >
+                                <Text className="text-white text-center text-xl font-bold">
+                                    Retour au menu
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    )}
+                </View>
             </ScrollView>
         </SafeAreaView>
     );

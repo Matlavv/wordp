@@ -90,30 +90,31 @@ export default function SoloGameSettings() {
                 </View>
 
                 {/* Section Règles du jeu */}
-                <View className="mx-6 mb-8">
+                <View className="mx-6 mb-4">
                     <View className="bg-gray-800/30 rounded-2xl p-6">
                         <Text className="text-white font-bold text-xl text-center mb-4">
                             📖 Règles du mode solo
                         </Text>
                         <Text className="text-white text-base leading-7">
-                            🎯 Trouvez les <Text className="font-bold">9 réponses</Text> en 60
-                            secondes
+                            🎯 Trouvez les <Text className="font-bold">9 réponses</Text> en 2
+                            minutes
                             {'\n'}
                             {'\n'}
                             ⚠️ Attention parfois il y a une réponse piège !{'\n'}
                             {'\n'}
                             🏆 Votre objectif : obtenir le meilleur score possible{'\n'}
                             {'\n'}
-                            ⏱️ Vous avez 60 secondes par question pour donner vos réponses{'\n'}
+                            ⏱️ Vous avez 2 minutes par question pour trouver les réponses{'\n'}
                             {'\n'}
-                            📝 Taper les réponses que vous pensez correctes{'\n'}
+                            ⌨️ Tapez les réponses au clavier - elles apparaîtront si elles sont
+                            correctes{'\n'}
                             {'\n'}✅ Les bonnes réponses rapportent des points{'\n'}
                             {'\n'}❌ Les réponses pièges font perdre des points{'\n'}
                         </Text>
                     </View>
                 </View>
 
-                <View className="mx-6 mt-4 mb-8">
+                <View className="mx-6 mb-8">
                     <TouchableOpacity
                         className="bg-blue-500 active:bg-blue-600 p-4 rounded-2xl shadow-lg"
                         onPress={navigateToGameScreen}

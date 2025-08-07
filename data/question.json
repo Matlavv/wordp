@@ -4,6 +4,7 @@
             "id": 1,
             "theme": "Citez 9 joueurs champions du monde en 1998",
             "difficulty": 4,
+            "category": "Sport",
             "answers": [
                 { "text": "Zinédine Zidane", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Patrick Vieira", "isCorrect": true, "isTrap": false, "points": 2 },
@@ -20,15 +21,16 @@
             "id": 2,
             "theme": "Citez 9 planètes du système solaire",
             "difficulty": 2,
+            "category": "Science",
             "answers": [
-                { "text": "Mercure", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Vénus", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Terre", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Mars", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Jupiter", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Saturne", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Uranus", "isCorrect": true, "isTrap": false, "points": 1 },
-                { "text": "Neptune", "isCorrect": true, "isTrap": false, "points": 1 },
+                { "text": "Mercure", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Vénus", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Terre", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Mars", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Jupiter", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Saturne", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Uranus", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Neptune", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Pluton", "isCorrect": false, "isTrap": true, "points": -5 }
             ]
         },
@@ -36,6 +38,7 @@
             "id": 3,
             "theme": "Citez 9 films de Christopher Nolan",
             "difficulty": 5,
+            "category": "Cinema",
             "answers": [
                 { "text": "Inception", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "The Dark Knight", "isCorrect": true, "isTrap": false, "points": 2 },
@@ -44,8 +47,8 @@
                 { "text": "Dunkirk", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Tenet", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Oppenheimer", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "The Matrix", "isCorrect": false, "isTrap": true, "points": -5 },
-                { "text": "The Prestige", "isCorrect": true, "isTrap": false, "points": 2 }
+                { "text": "The Prestige", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "The Matrix", "isCorrect": false, "isTrap": true, "points": -5 }
             ]
         }
     ]

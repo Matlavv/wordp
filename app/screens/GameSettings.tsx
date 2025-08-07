@@ -4,7 +4,7 @@ import { SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View } fro
 import { useGame } from '../../contexts/GameContext';
 
 const AVAILABLE_COLORS = [
-    { name: 'Rose', value: 'bg-pink-900', textColor: 'text-pink-100' },
+    { name: 'Rose', value: 'bg-pink-200', textColor: 'text-pink-100' },
     { name: 'Bleu', value: 'bg-blue-200', textColor: 'text-blue-900' },
     { name: 'Vert', value: 'bg-green-200', textColor: 'text-green-900' },
     { name: 'Violet', value: 'bg-purple-200', textColor: 'text-purple-900' },

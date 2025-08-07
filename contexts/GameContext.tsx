@@ -32,7 +32,9 @@ type GameAction =
     | { type: 'START_TIMER' }
     | { type: 'TICK_TIMER' }
     | { type: 'STOP_TIMER' }
-    | { type: 'UPDATE_SCORE'; payload: { teamId: string; points: number } };
+    | { type: 'UPDATE_SCORE'; payload: { teamId: string; points: number } }
+    | { type: 'SET_TEAM_SCORE'; payload: { teamId: string; score: number } }
+    | { type: 'RESET_GAME' };
 
 const initialState: GameState = {
     teams: [],
@@ -122,6 +124,23 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                         ? { ...team, score: team.score + action.payload.points }
                         : team,
                 ),
+            };
+
+        case 'SET_TEAM_SCORE':
+            return {
+                ...state,
+                teams: state.teams.map((team) =>
+                    team.id === action.payload.teamId
+                        ? { ...team, score: action.payload.score }
+                        : team,
+                ),
+            };
+
+        case 'RESET_GAME':
+            return {
+                ...initialState,
+                teams: state.teams.map((team) => ({ ...team, score: 0 })), // Garder les équipes mais remettre les scores à 0
+                totalRounds: state.totalRounds, // Garder le nombre de rounds
             };
 
         default:

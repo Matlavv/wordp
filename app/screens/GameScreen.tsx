@@ -14,13 +14,13 @@ function calculateScore(selectedAnswers: boolean[], answers: any[], difficulty: 
         if (isSelected && answers[index]) {
             const answer = answers[index];
             if (answer.isTrap) {
-                score -= 5;
+                score += answer.points;
             } else if (answer.isCorrect) {
-                score += difficulty;
+                score += answer.points;
             }
         }
     });
-    return Math.max(0, score);
+    return score;
 }
 
 export default function GameScreen() {
@@ -33,8 +33,42 @@ export default function GameScreen() {
     };
 
     const selectAnswer = (index: number) => {
-        if (state.gamePhase === 'playing' && state.isTimerActive) {
+        if (
+            (state.gamePhase === 'playing' && state.isTimerActive) ||
+            state.gamePhase === 'results'
+        ) {
             dispatch({ type: 'SELECT_ANSWER', payload: index });
+
+            // Si on est en phase de résultats, recalculer et mettre à jour le score immédiatement
+            if (state.gamePhase === 'results' && state.currentQuestion) {
+                // Calculer le nouveau tableau de sélections
+                const newSelectedAnswers = [...state.selectedAnswers];
+                newSelectedAnswers[index] = !newSelectedAnswers[index];
+
+                // Calculer le nouveau score basé sur les nouvelles sélections
+                const newPoints = calculateScore(
+                    newSelectedAnswers,
+                    state.currentQuestion.answers,
+                    state.currentQuestion.difficulty,
+                );
+
+                // Calculer l'ancien score pour cette question
+                const oldPoints = calculateScore(
+                    state.selectedAnswers,
+                    state.currentQuestion.answers,
+                    state.currentQuestion.difficulty,
+                );
+
+                // Mettre à jour le score total en ajustant la différence
+                const scoreDifference = newPoints - oldPoints;
+                dispatch({
+                    type: 'SET_TEAM_SCORE',
+                    payload: {
+                        teamId: currentTeam.id,
+                        score: currentTeam.score + scoreDifference,
+                    },
+                });
+            }
         }
     };
 
@@ -54,6 +88,11 @@ export default function GameScreen() {
         dispatch({ type: 'NEXT_TEAM' });
     };
 
+    const resetGame = () => {
+        dispatch({ type: 'RESET_GAME' });
+        dispatch({ type: 'START_GAME' });
+    };
+
     // Gestion automatique de la soumission quand le timer arrive à 0
     React.useEffect(() => {
         if (state.timeRemaining === 0 && state.gamePhase === 'playing') {
@@ -63,7 +102,7 @@ export default function GameScreen() {
 
     return (
         <SafeAreaView className={`flex-1 ${currentTeam?.color || 'bg-dark-blue'}`}>
-            <ScrollView className="flex-1 px-6">
+            <ScrollView className="flex-1 px-6 mt-6 mb-6">
                 {/* Round */}
                 <Text className="text-center text-2xl font-bold mt-8 mb-4 text-gray-800">
                     Round {state.currentRound}/{state.totalRounds}
@@ -144,15 +183,22 @@ export default function GameScreen() {
                                             : 'bg-white/50 border-gray-400'
                                     }`}
                                 >
-                                    <Text
-                                        className={`text-center font-medium ${
-                                            state.selectedAnswers[index]
-                                                ? 'text-white'
-                                                : 'text-gray-800'
-                                        }`}
-                                    >
-                                        {answer.text}
-                                    </Text>
+                                    <View className="flex-row justify-between items-center">
+                                        <Text
+                                            className={`flex-1 font-medium ${
+                                                state.selectedAnswers[index]
+                                                    ? 'text-white'
+                                                    : 'text-gray-800'
+                                            }`}
+                                        >
+                                            {answer.text}
+                                        </Text>
+                                        <View className={`ml-3 px-2`}>
+                                            <Text className="text-gray-500 text-base font-bold">
+                                                {answer.isTrap ? '-5' : `+${answer.points}`}
+                                            </Text>
+                                        </View>
+                                    </View>
                                 </TouchableOpacity>
                             ))}
                         </View>
@@ -193,9 +239,7 @@ export default function GameScreen() {
 
                         {/* Corrections */}
                         <View className="mb-6">
-                            <Text className="text-lg font-bold mb-4 text-gray-800">
-                                Corrections:
-                            </Text>
+                            <Text className="text-lg font-bold mb-4 text-gray-800">Réponses :</Text>
                             {state.currentQuestion.answers.map((answer, index) => {
                                 const isSelected = state.selectedAnswers[index];
                                 const isCorrect = answer.isCorrect;
@@ -219,26 +263,35 @@ export default function GameScreen() {
                                         textColor = 'text-white';
                                         icon = '⭕ ';
                                     }
-                                } else if (isCorrect) {
-                                    bgColor = 'bg-green-200';
-                                    textColor = 'text-green-800';
-                                    icon = '✅ ';
                                 }
 
                                 return (
-                                    <View key={index} className={`p-3 mb-2 rounded-lg ${bgColor}`}>
-                                        <Text className={`${textColor} font-medium`}>
-                                            {icon}
-                                            {answer.text}
-                                        </Text>
-                                    </View>
+                                    <TouchableOpacity
+                                        key={index}
+                                        onPress={() => selectAnswer(index)}
+                                        className={`p-3 mb-2 rounded-lg ${bgColor} border-2 ${
+                                            isSelected ? 'border-blue-400' : 'border-transparent'
+                                        }`}
+                                    >
+                                        <View className="flex-row justify-between items-center">
+                                            <Text className={`${textColor} font-medium flex-1`}>
+                                                {icon}
+                                                {answer.text}
+                                            </Text>
+                                            <View className="ml-3">
+                                                <Text className={`${textColor} text-sm font-bold`}>
+                                                    {answer.isTrap ? '-5' : `+${answer.points}`} pts
+                                                </Text>
+                                            </View>
+                                        </View>
+                                    </TouchableOpacity>
                                 );
                             })}
                         </View>
 
                         <TouchableOpacity
                             onPress={nextTeam}
-                            className="bg-blue-600 p-4 rounded-2xl"
+                            className="bg-blue-600 p-4 rounded-2xl mb-4"
                         >
                             <Text className="text-white text-center text-lg font-bold">
                                 Équipe suivante
@@ -250,7 +303,7 @@ export default function GameScreen() {
                 {state.gamePhase === 'finished' && (
                     <View className="items-center">
                         <Text className="text-center text-3xl font-bold mb-8 text-gray-800">
-                            Fin du jeu !
+                            Fin de la partie !
                         </Text>
 
                         {/* Classement final */}
@@ -278,6 +331,16 @@ export default function GameScreen() {
                                         </Text>
                                     </View>
                                 ))}
+                        </View>
+                        <View className="mt-6">
+                            <TouchableOpacity
+                                onPress={resetGame}
+                                className="bg-green-600 px-8 py-4 rounded-2xl"
+                            >
+                                <Text className="text-white text-xl font-bold text-center">
+                                    Rejouer
+                                </Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 )}

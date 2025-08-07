@@ -2,6 +2,7 @@ export interface Answer {
     text: string;
     isCorrect: boolean;
     isTrap: boolean;
+    points: number;
 }
 
 export interface Question {

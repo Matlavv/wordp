@@ -21,6 +21,7 @@ export interface GameState {
     gameMode: 'solo' | 'multi'; // Pour différencier les modes de jeu
     timeRemaining: number;
     isTimerActive: boolean;
+    usedQuestionIds: number[]; // IDs des questions déjà utilisées dans la partie en cours
 }
 
 type GameAction =
@@ -53,6 +54,7 @@ const initialState: GameState = {
     gameMode: 'multi',
     timeRemaining: 60,
     isTimerActive: false,
+    usedQuestionIds: [],
 };
 
 function gameReducer(state: GameState, action: GameAction): GameState {
@@ -64,13 +66,15 @@ function gameReducer(state: GameState, action: GameAction): GameState {
             return { ...state, totalRounds: action.payload };
 
         case 'START_GAME':
+            const initialQuestion = getRandomQuestion();
             return {
                 ...state,
                 gameMode: 'multi',
                 gamePhase: 'waiting',
                 currentRound: 1,
                 currentTeamIndex: 0,
-                currentQuestion: getRandomQuestion(),
+                currentQuestion: initialQuestion,
+                usedQuestionIds: initialQuestion ? [initialQuestion.id] : [],
             };
 
         case 'START_SOLO_GAME':
@@ -82,6 +86,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                     score: 0,
                 },
             ];
+            const soloInitialQuestion = getRandomQuestion();
             return {
                 ...state,
                 teams: soloTeam,
@@ -90,7 +95,8 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 gamePhase: 'waiting',
                 currentRound: 1,
                 currentTeamIndex: 0,
-                currentQuestion: getRandomQuestion(),
+                currentQuestion: soloInitialQuestion,
+                usedQuestionIds: soloInitialQuestion ? [soloInitialQuestion.id] : [],
             };
 
         case 'NEXT_SOLO_ROUND':
@@ -100,15 +106,19 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 return { ...state, gamePhase: 'finished' };
             }
 
+            const nextSoloQuestion = getRandomQuestion(state.usedQuestionIds);
             return {
                 ...state,
                 currentRound: nextSoloRound,
                 gamePhase: 'waiting',
-                currentQuestion: getRandomQuestion(),
+                currentQuestion: nextSoloQuestion,
                 selectedAnswers: new Array(9).fill(false),
                 foundAnswers: new Array(9).fill(''),
                 timeRemaining: 120, // 2 minutes pour le mode solo
                 isTimerActive: false,
+                usedQuestionIds: nextSoloQuestion
+                    ? [...state.usedQuestionIds, nextSoloQuestion.id]
+                    : state.usedQuestionIds,
             };
 
         case 'START_ROUND':
@@ -174,16 +184,20 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 return { ...state, gamePhase: 'finished' };
             }
 
+            const nextTeamQuestion = getRandomQuestion(state.usedQuestionIds);
             return {
                 ...state,
                 currentTeamIndex: nextTeamIndex,
                 currentRound: nextMultiRound,
                 gamePhase: 'waiting',
-                currentQuestion: getRandomQuestion(),
+                currentQuestion: nextTeamQuestion,
                 selectedAnswers: new Array(9).fill(false),
                 foundAnswers: new Array(9).fill(''),
                 timeRemaining: state.gameMode === 'solo' ? 120 : 60, // 2 minutes pour solo, 1 minute pour multi
                 isTimerActive: false,
+                usedQuestionIds: nextTeamQuestion
+                    ? [...state.usedQuestionIds, nextTeamQuestion.id]
+                    : state.usedQuestionIds,
             };
 
         case 'START_TIMER':
@@ -227,6 +241,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 teams: state.teams.map((team) => ({ ...team, score: 0 })), // Garder les équipes mais remettre les scores à 0
                 totalRounds: state.totalRounds, // Garder le nombre de rounds
                 foundAnswers: new Array(9).fill(''),
+                usedQuestionIds: [], // Réinitialiser les questions utilisées pour une nouvelle partie
             };
 
         default:
@@ -234,9 +249,16 @@ function gameReducer(state: GameState, action: GameAction): GameState {
     }
 }
 
-function getRandomQuestion(): Question {
+function getRandomQuestion(usedQuestionIds: number[] = []): Question {
     const questions = questionsData.questions as Question[];
-    return questions[Math.floor(Math.random() * questions.length)];
+    const availableQuestions = questions.filter((q) => !usedQuestionIds.includes(q.id));
+
+    // Si toutes les questions ont été utilisées, on reprend toutes les questions
+    if (availableQuestions.length === 0) {
+        return questions[Math.floor(Math.random() * questions.length)];
+    }
+
+    return availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
 }
 
 function normalizeString(str: string): string {

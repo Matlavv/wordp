@@ -33,17 +33,17 @@ export default function SoloPlayingPhase({
 
     const handleSubmitAnswer = () => {
         if (currentInput.trim()) {
-            const previousFoundCount = foundAnswers.filter((answer) => answer !== '').length;
+            const inputValue = currentInput.trim().toLowerCase();
+            const isCorrectAnswer = currentQuestion.answers.some(
+                (answer, index) => !foundAnswers[index] && answer.text.toLowerCase() === inputValue,
+            );
+
             onSubmitAnswer(currentInput.trim());
 
-            // Vérifier si une nouvelle réponse a été trouvée après soumission
-            setTimeout(() => {
-                const newFoundCount = foundAnswers.filter((answer) => answer !== '').length;
-                if (newFoundCount === previousFoundCount) {
-                    // Aucune nouvelle réponse trouvée, déclencher l'animation de secousse
-                    triggerShake();
-                }
-            }, 100);
+            // Déclencher l'animation seulement si la réponse est incorrecte
+            if (!isCorrectAnswer) {
+                triggerShake();
+            }
 
             setCurrentInput('');
         }
@@ -53,6 +53,42 @@ export default function SoloPlayingPhase({
 
     return (
         <View className="flex-1">
+            {/* Zone de saisie */}
+            {isTimerActive && (
+                <Animated.View
+                    style={{
+                        transform: [{ translateX: shakeAnimation }],
+                    }}
+                    className="mb-6"
+                >
+                    <Text className="text-lg font-bold mb-3 text-gray-800">
+                        Tapez votre réponse :
+                    </Text>
+                    <View className="flex-row space-x-3">
+                        <TextInput
+                            value={currentInput}
+                            onChangeText={setCurrentInput}
+                            onFocus={onInputFocus}
+                            placeholder="Votre réponse..."
+                            className="flex-1 bg-white/80 p-4 rounded-xl border border-gray-300 text-gray-800"
+                            placeholderTextColor="#9CA3AF"
+                            onSubmitEditing={handleSubmitAnswer}
+                            autoCapitalize="words"
+                            autoCorrect={false}
+                            returnKeyType="send"
+                        />
+                        <TouchableOpacity
+                            onPress={handleSubmitAnswer}
+                            disabled={!currentInput.trim()}
+                            className={`px-6 py-4 rounded-xl ${
+                                currentInput.trim() ? 'bg-blue-600' : 'bg-gray-400'
+                            }`}
+                        >
+                            <Text className="text-white font-bold">✓</Text>
+                        </TouchableOpacity>
+                    </View>
+                </Animated.View>
+            )}
             {/* Liste des réponses avec tirets */}
             <View className="mb-6">
                 <Text className="text-lg font-bold mb-4 text-gray-800">Réponses :</Text>
@@ -101,59 +137,10 @@ export default function SoloPlayingPhase({
             {foundCount > 0 && isTimerActive && (
                 <TouchableOpacity
                     onPress={onSubmitAllAnswers}
-                    className="bg-orange-600 p-4 rounded-2xl mb-4"
+                    className="bg-orange-600 p-4 rounded-2xl mb-12"
                 >
                     <Text className="text-white text-center text-lg font-bold">
                         Terminer le round ({foundCount} réponses)
-                    </Text>
-                </TouchableOpacity>
-            )}
-
-            {/* Zone de saisie */}
-            {isTimerActive && (
-                <Animated.View
-                    style={{
-                        transform: [{ translateX: shakeAnimation }],
-                    }}
-                    className="mb-6"
-                >
-                    <Text className="text-lg font-bold mb-3 text-gray-800">
-                        Tapez votre réponse :
-                    </Text>
-                    <View className="flex-row space-x-3">
-                        <TextInput
-                            value={currentInput}
-                            onChangeText={setCurrentInput}
-                            onFocus={onInputFocus}
-                            placeholder="Votre réponse..."
-                            className="flex-1 bg-white/80 p-4 rounded-xl border border-gray-300 text-gray-800"
-                            placeholderTextColor="#9CA3AF"
-                            onSubmitEditing={handleSubmitAnswer}
-                            autoCapitalize="words"
-                            autoCorrect={false}
-                            returnKeyType="send"
-                        />
-                        <TouchableOpacity
-                            onPress={handleSubmitAnswer}
-                            disabled={!currentInput.trim()}
-                            className={`px-6 py-4 rounded-xl ${
-                                currentInput.trim() ? 'bg-blue-600' : 'bg-gray-400'
-                            }`}
-                        >
-                            <Text className="text-white font-bold">✓</Text>
-                        </TouchableOpacity>
-                    </View>
-                </Animated.View>
-            )}
-
-            {/* Terminer le round */}
-            {isTimerActive && (
-                <TouchableOpacity
-                    onPress={onSubmitAllAnswers}
-                    className="bg-red-600 p-4 rounded-2xl mb-4"
-                >
-                    <Text className="text-white text-center text-lg font-bold">
-                        Terminer le round
                     </Text>
                 </TouchableOpacity>
             )}

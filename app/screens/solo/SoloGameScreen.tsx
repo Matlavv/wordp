@@ -159,7 +159,7 @@ export default function SoloGameScreen() {
                                     Score final : {currentTeam.score} points
                                 </Text>
                                 <Text className="text-center text-lg text-gray-700">
-                                    Merci d'avoir joué en mode solo !
+                                    Merci d&apos;avoir joué en mode solo !
                                 </Text>
                             </View>
 

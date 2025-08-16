@@ -145,6 +145,18 @@ export default function SoloPlayingPhase({
                     </View>
                 </Animated.View>
             )}
+
+            {/* Terminer le round */}
+            {isTimerActive && (
+                <TouchableOpacity
+                    onPress={onSubmitAllAnswers}
+                    className="bg-red-600 p-4 rounded-2xl mb-4"
+                >
+                    <Text className="text-white text-center text-lg font-bold">
+                        Terminer le round
+                    </Text>
+                </TouchableOpacity>
+            )}
         </View>
     );
 }

@@ -1,5 +1,6 @@
+import { router } from 'expo-router';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { Team } from '../types/game';
 
 interface GameHeaderProps {
@@ -21,10 +22,21 @@ export default function GameHeader({
 }: GameHeaderProps) {
     return (
         <>
-            {/* Round */}
-            <Text className="text-center text-2xl font-bold mt-8 mb-4 text-gray-800">
-                Round {currentRound}/{totalRounds}
-            </Text>
+            {/* Round avec bouton home aligné */}
+            <View className="flex-row justify-between items-center mt-10 mb-4">
+                <View className="flex-1" />
+                <Text className="text-center text-2xl font-bold text-gray-800">
+                    Round {currentRound}/{totalRounds}
+                </Text>
+                <View className="flex-1 items-end">
+                    <TouchableOpacity
+                        onPress={() => router.push('/')}
+                        className="bg-white/20 p-3 rounded-full"
+                    >
+                        <Text className="text-xl">🏠</Text>
+                    </TouchableOpacity>
+                </View>
+            </View>
 
             {/* Nom de l'équipe */}
             <Text className="text-center text-3xl font-bold mb-4 text-gray-800">

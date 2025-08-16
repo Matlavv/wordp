@@ -18,6 +18,7 @@ export interface GameState {
     selectedAnswers: boolean[];
     foundAnswers: string[]; // Pour le mode solo, stocke les réponses trouvées
     gamePhase: 'waiting' | 'playing' | 'results' | 'finished';
+    gameMode: 'solo' | 'multi'; // Pour différencier les modes de jeu
     timeRemaining: number;
     isTimerActive: boolean;
 }
@@ -49,6 +50,7 @@ const initialState: GameState = {
     selectedAnswers: new Array(9).fill(false),
     foundAnswers: new Array(9).fill(''),
     gamePhase: 'waiting',
+    gameMode: 'multi',
     timeRemaining: 60,
     isTimerActive: false,
 };
@@ -64,6 +66,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         case 'START_GAME':
             return {
                 ...state,
+                gameMode: 'multi',
                 gamePhase: 'waiting',
                 currentRound: 1,
                 currentTeamIndex: 0,
@@ -82,6 +85,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
             return {
                 ...state,
                 teams: soloTeam,
+                gameMode: 'solo',
                 totalRounds: action.payload,
                 gamePhase: 'waiting',
                 currentRound: 1,
@@ -103,7 +107,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 currentQuestion: getRandomQuestion(),
                 selectedAnswers: new Array(9).fill(false),
                 foundAnswers: new Array(9).fill(''),
-                timeRemaining: 120,
+                timeRemaining: 120, // 2 minutes pour le mode solo
                 isTimerActive: false,
             };
 
@@ -111,7 +115,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
             return {
                 ...state,
                 gamePhase: 'playing',
-                timeRemaining: 120, // 2 minutes pour le mode solo
+                timeRemaining: state.gameMode === 'solo' ? 120 : 60, // 2 minutes pour solo, 1 minute pour multi
                 selectedAnswers: new Array(9).fill(false),
                 foundAnswers: new Array(9).fill(''),
             };
@@ -127,7 +131,6 @@ function gameReducer(state: GameState, action: GameAction): GameState {
             const userAnswer = normalizeString(action.payload);
             const correctAnswers = state.currentQuestion.answers;
             const newFoundAnswers = [...state.foundAnswers];
-            let foundMatch = false;
 
             // Chercher si la réponse correspond à une des réponses correctes
             correctAnswers.forEach((answer, index) => {
@@ -140,14 +143,12 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 // Correspondance exacte
                 if (answerText === userAnswer) {
                     newFoundAnswers[index] = answer.text;
-                    foundMatch = true;
                     return;
                 }
 
                 // Correspondance partielle (au moins 3 caractères)
                 if (userAnswer.length >= 3 && answerText.includes(userAnswer)) {
                     newFoundAnswers[index] = answer.text;
-                    foundMatch = true;
                     return;
                 }
 
@@ -155,7 +156,6 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 answerWords.forEach((word) => {
                     if (word.length >= 3 && word === userAnswer) {
                         newFoundAnswers[index] = answer.text;
-                        foundMatch = true;
                     }
                 });
             });
@@ -182,7 +182,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
                 currentQuestion: getRandomQuestion(),
                 selectedAnswers: new Array(9).fill(false),
                 foundAnswers: new Array(9).fill(''),
-                timeRemaining: 60,
+                timeRemaining: state.gameMode === 'solo' ? 120 : 60, // 2 minutes pour solo, 1 minute pour multi
                 isTimerActive: false,
             };
 
@@ -243,7 +243,7 @@ function normalizeString(str: string): string {
     return str
         .toLowerCase()
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+        .replace(/[\u0300-\u036f]/g, '')
         .trim();
 }
 

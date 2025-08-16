@@ -44,7 +44,6 @@ export default function SoloResultsPhase({
                     let bgColor = 'bg-white/30';
                     let textColor = 'text-gray-800';
                     let icon = '';
-                    let status = '';
 
                     if (wasFound) {
                         if (isTrap) {

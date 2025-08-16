@@ -7,12 +7,12 @@
             "category": "Sport",
             "answers": [
                 { "text": "Zinédine Zidane", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "Patrick Vieira", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "Robert Pirès", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Patrick Vieira", "isCorrect": true, "isTrap": false, "points": 4 },
+                { "text": "Robert Pirès", "isCorrect": true, "isTrap": false, "points": 3 },
                 { "text": "Lilian Thuram", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Thierry Henry", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Fabien Barthez", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "Lilian Thuram", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Vincent Candela", "isCorrect": true, "isTrap": false, "points": 4 },
                 { "text": "Didier Deschamps", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Marcel Desailly", "isCorrect": true, "isTrap": false, "points": 2 }
             ]
@@ -21,7 +21,7 @@
             "id": 2,
             "theme": "Citez 9 planètes du système solaire",
             "difficulty": 2,
-            "category": "Science",
+            "category": "Science et Technologie",
             "answers": [
                 { "text": "Mercure", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Vénus", "isCorrect": true, "isTrap": false, "points": 2 },
@@ -38,17 +38,2489 @@
             "id": 3,
             "theme": "Citez 9 films de Christopher Nolan",
             "difficulty": 5,
-            "category": "Cinema",
+            "category": "Divertissement",
             "answers": [
                 { "text": "Inception", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "The Dark Knight", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "Interstellar", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "Memento", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "Dunkirk", "isCorrect": true, "isTrap": false, "points": 2 },
-                { "text": "Tenet", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Memento", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Dunkerque", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Tenet", "isCorrect": true, "isTrap": false, "points": 3 },
                 { "text": "Oppenheimer", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "The Prestige", "isCorrect": true, "isTrap": false, "points": 2 },
                 { "text": "The Matrix", "isCorrect": false, "isTrap": true, "points": -5 }
+            ]
+        },
+        {
+            "id": 4,
+            "theme": "Citez 9 pays qui participent à l'Union Européenne",
+            "difficulty": 2,
+            "category": "Histoire / Politique",
+            "answers": [
+                { "text": "France", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Allemagne", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Espagne", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Italie", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Belgique", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Portugal", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Pays-Bas", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Suède", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Royaume-Uni", "isCorrect": false, "isTrap": true, "points": -5 }
+            ]
+        },
+        {
+            "id": 5,
+            "theme": "Citez 9 plats emblématiques de la cuisine italienne",
+            "difficulty": 3,
+            "category": "Gastronomie",
+            "answers": [
+                { "text": "Pizza Margherita", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Spaghetti Carbonara", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Lasagnes", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Risotto", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Tiramisu", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Arancini", "isCorrect": true, "isTrap": false, "points": 4 },
+                { "text": "Osso Buco", "isCorrect": true, "isTrap": false, "points": 5 },
+                { "text": "Gelato", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Sushi", "isCorrect": false, "isTrap": true, "points": -5 }
+            ]
+        },
+        {
+            "id": 6,
+            "theme": "Citez 9 prix Nobel de la paix célèbres",
+            "difficulty": 4,
+            "category": "Culture Générale",
+            "answers": [
+                { "text": "Nelson Mandela", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Barack Obama", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Martin Luther King", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Malala Yousafzai", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Mère Teresa", "isCorrect": true, "isTrap": false, "points": 4 },
+                { "text": "Jimmy Carter", "isCorrect": true, "isTrap": false, "points": 4 },
+                {
+                    "text": "Le Programme Alimentaire Mondial",
+                    "isCorrect": true,
+                    "isTrap": false,
+                    "points": 5
+                },
+                { "text": "Kofi Annan", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Elon Musk", "isCorrect": false, "isTrap": true, "points": -5 }
+            ]
+        },
+        {
+            "id": 7,
+            "theme": "Citez 9 consoles de jeux vidéo célèbres",
+            "difficulty": 2,
+            "category": "Divertissement",
+            "answers": [
+                { "text": "Nintendo DS", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Nintendo Switch", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Game Boy", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Xbox 360", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Sega Mega Drive", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "PlayStation 5", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Nintendo 64", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Wii", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Atari 2600", "isCorrect": true, "isTrap": false, "points": 4 }
+            ]
+        },
+        {
+            "id": 8,
+            "theme": "Citez 9 capitales africaines",
+            "difficulty": 3,
+            "category": "Géographie / Economie",
+            "answers": [
+                { "text": "Dakar", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Abidjan", "isCorrect": false, "isTrap": true, "points": -5 },
+                { "text": "Nairobi", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Pretoria", "isCorrect": true, "isTrap": false, "points": 4 },
+                { "text": "Le Caire", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Rabat", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Addis-Abeba", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Bamako", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Kinshasa", "isCorrect": true, "isTrap": false, "points": 3 }
+            ]
+        },
+        {
+            "id": 9,
+            "theme": "Citez 9 personnages de la saga Harry Potter",
+            "difficulty": 2,
+            "category": "Arts / Littérature",
+            "answers": [
+                { "text": "Harry Potter", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Hermione Granger", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Ron Weasley", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Albus Dumbledore", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Severus Rogue", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Voldemort", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Drago Maley", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "Sirius Black", "isCorrect": true, "isTrap": false, "points": 4 },
+                { "text": "Frodo Baggins", "isCorrect": false, "isTrap": true, "points": -5 }
+            ]
+        },
+        {
+            "id": 10,
+            "theme": "Citez 9 applications ou réseaux sociaux très utilisés",
+            "difficulty": 2,
+            "category": "Culture Générale",
+            "answers": [
+                { "text": "Instagram", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Facebook", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "TikTok", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Twitter/X", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "Snapchat", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "LinkedIn", "isCorrect": true, "isTrap": false, "points": 3 },
+                { "text": "YouTube", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "WhatsApp", "isCorrect": true, "isTrap": false, "points": 2 },
+                { "text": "BeReal", "isCorrect": true, "isTrap": false, "points": 3 }
+            ]
+        },
+        {
+            "questions": [
+                {
+                    "id": 11,
+                    "theme": "Citez 9 capitales européennes",
+                    "difficulty": 2,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Paris", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Berlin", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Rome", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Madrid", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Lisbonne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Athènes", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Varsovie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Vienne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Barcelone", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 12,
+                    "theme": "Citez 9 desserts français célèbres",
+                    "difficulty": 3,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Crème brûlée", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Macarons", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Tarte Tatin", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Île flottante",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Mille-feuille",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Paris-Brest", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Profiteroles", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Clafoutis", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Donuts", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 13,
+                    "theme": "Citez 9 pays qui ont accueilli les Jeux Olympiques",
+                    "difficulty": 4,
+                    "category": "Sport",
+                    "answers": [
+                        { "text": "France", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Japon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "États-Unis", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Canada", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Russie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Italie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Allemagne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Chine", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Brésil", "isCorrect": true, "isTrap": false, "points": 2 }
+                    ]
+                },
+                {
+                    "id": 14,
+                    "theme": "Citez 9 romans de Victor Hugo",
+                    "difficulty": 5,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        {
+                            "text": "Les Misérables",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Notre-Dame de Paris",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "L’Homme qui rit",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Les Travailleurs de la mer",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Bug-Jargal", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Le Dernier Jour d’un condamné",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Han d’Islande",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Quatrevingt-treize",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Germinal", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 15,
+                    "theme": "Citez 9 présidents français de la Cinquième République",
+                    "difficulty": 3,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        {
+                            "text": "Charles de Gaulle",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Georges Pompidou",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Valéry Giscard d’Estaing",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "François Mitterrand",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Jacques Chirac",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Nicolas Sarkozy",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "François Hollande",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Emmanuel Macron",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Philippe Pétain",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 16,
+                    "theme": "Citez 9 inventions technologiques récentes",
+                    "difficulty": 4,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Smartphone", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Imprimante 3D",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Voiture électrique",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Casque VR", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Drone civil", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "ChatGPT", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Blockchain", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Montre connectée",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Minitel", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 17,
+                    "theme": "Citez 9 séries Netflix originales",
+                    "difficulty": 2,
+                    "category": "Divertissement",
+                    "answers": [
+                        {
+                            "text": "Stranger Things",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "The Witcher", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Casa de Papel",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Dark", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Squid Game", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "You", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Sex Education",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Shadow and Bone",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Breaking Bad", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 18,
+                    "theme": "Citez 9 prix Nobel célèbres dans différentes disciplines",
+                    "difficulty": 5,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Marie Curie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Albert Einstein",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Malala Yousafzai",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Nelson Mandela",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Jean-Paul Sartre",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Barack Obama", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Alexander Fleming",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Erwin Schrödinger",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Stephen Hawking",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 19,
+                    "theme": "Citez 9 pays organisateurs de la Coupe du Monde de football",
+                    "difficulty": 4,
+                    "category": "Sport",
+                    "answers": [
+                        { "text": "France", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Allemagne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Italie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Espagne", "isCorrect": false, "isTrap": true, "points": -5 },
+                        { "text": "Brésil", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Afrique du Sud",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Russie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Qatar", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "États-Unis", "isCorrect": true, "isTrap": false, "points": 2 }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "theme": "Citez 9 présidents français de la Cinquième République",
+                    "difficulty": 4,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        {
+                            "text": "Charles de Gaulle",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Georges Pompidou",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Valéry Giscard d’Estaing",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "François Mitterrand",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Jacques Chirac",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Nicolas Sarkozy",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "François Hollande",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Emmanuel Macron",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Philippe Pétain",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 21,
+                    "theme": "Citez 9 fromages français célèbres",
+                    "difficulty": 2,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Camembert", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Roquefort", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Comté", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Brie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Reblochon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Munster", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Chèvre", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Saint-Nectaire",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Mozzarella", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 22,
+                    "theme": "Citez 9 plus grandes villes francaises",
+                    "difficulty": 2,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Paris", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Marseille", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Lyon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Toulouse", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Nice", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Nantes", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Montpellier", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Strasbourg", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Bordeaux", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Lille", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 23,
+                    "theme": "Citez 9 mangas les plus vendus au monde",
+                    "difficulty": 4,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "One piece", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Naruto", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Dragon Ball", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Doraemon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Detective Conan",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Demon Slayer", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Slam Dunk", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Bleach", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "L'attaque des titans",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        }
+                    ]
+                },
+                {
+                    "questions": [
+                        {
+                            "id": 24,
+                            "theme": "Citez 9 mers ou océans du monde",
+                            "difficulty": 3,
+                            "category": "Géographie / Economie",
+                            "answers": [
+                                {
+                                    "text": "Océan Atlantique",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Océan Pacifique",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Océan Indien",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Océan Arctique",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Océan Antarctique",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 4
+                                },
+                                {
+                                    "text": "Mer Méditerranée",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Mer Noire",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Mer Rouge",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Lac Baïkal",
+                                    "isCorrect": false,
+                                    "isTrap": true,
+                                    "points": -5
+                                }
+                            ]
+                        },
+                        {
+                            "id": 25,
+                            "theme": "Citez 9 artistes de la Renaissance",
+                            "difficulty": 5,
+                            "category": "Arts / Littérature",
+                            "answers": [
+                                {
+                                    "text": "Léonard de Vinci",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Michel-Ange",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Raphaël",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Donatello",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Sandro Botticelli",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Titien",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Albrecht Dürer",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 4
+                                },
+                                {
+                                    "text": "Giotto",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 4
+                                },
+                                {
+                                    "text": "Claude Monet",
+                                    "isCorrect": false,
+                                    "isTrap": true,
+                                    "points": -5
+                                }
+                            ]
+                        },
+                        {
+                            "id": 26,
+                            "theme": "Citez 9 pays d’Amérique du Sud",
+                            "difficulty": 2,
+                            "category": "Géographie / Economie",
+                            "answers": [
+                                {
+                                    "text": "Brésil",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Argentine",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Chili",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Uruguay",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Paraguay",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Pérou",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Équateur",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Colombie",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Mexique",
+                                    "isCorrect": false,
+                                    "isTrap": true,
+                                    "points": -5
+                                }
+                            ]
+                        },
+                        {
+                            "id": 27,
+                            "theme": "Citez 9 grands écrivains français",
+                            "difficulty": 4,
+                            "category": "Arts / Littérature",
+                            "answers": [
+                                {
+                                    "text": "Victor Hugo",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Émile Zola",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Molière",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Voltaire",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Jean-Jacques Rousseau",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Honoré de Balzac",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Albert Camus",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "Jean-Paul Sartre",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                {
+                                    "text": "William Shakespeare",
+                                    "isCorrect": false,
+                                    "isTrap": true,
+                                    "points": -5
+                                }
+                            ]
+                        },
+                        {
+                            "id": 28,
+                            "theme": "Citez 9 disciplines présentes aux Jeux Olympiques d'été",
+                            "difficulty": 3,
+                            "category": "Sport",
+                            "answers": [
+                                {
+                                    "text": "Athlétisme",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Natation",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Gymnastique",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Escrime",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 3
+                                },
+                                { "text": "Judo", "isCorrect": true, "isTrap": false, "points": 2 },
+                                {
+                                    "text": "Cyclisme",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Basket-ball",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Tennis",
+                                    "isCorrect": true,
+                                    "isTrap": false,
+                                    "points": 2
+                                },
+                                {
+                                    "text": "Rugby à XV",
+                                    "isCorrect": false,
+                                    "isTrap": true,
+                                    "points": -5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 29,
+                    "theme": "Citez 9 monuments parisiens célèbres",
+                    "difficulty": 2,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Tour Eiffel", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Arc de Triomphe",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Notre-Dame", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Sacré-Cœur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Panthéon", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Invalides", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Louvre", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Opéra Garnier",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Big Ben", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "theme": "Citez 9 instruments de musique à cordes",
+                    "difficulty": 3,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        { "text": "Guitare", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Violon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Piano", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Harpe", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Violoncelle", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Contrebasse", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Banjo", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Mandoline", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Flûte", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 31,
+                    "theme": "Citez 9 espèces d'animaux de la savane africaine",
+                    "difficulty": 2,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Lion", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Éléphant", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Girafe", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Zèbre", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Rhinocéros", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hippopotame", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Guépard", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Hyène", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Ours polaire", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 32,
+                    "theme": "Citez 9 langages de programmation populaires",
+                    "difficulty": 4,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Python", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "JavaScript", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Java", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "C++", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "PHP", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Swift", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Kotlin", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Ruby", "isCorrect": true, "isTrap": false, "points": 3 }
+                    ]
+                },
+                {
+                    "id": 33,
+                    "theme": "Citez 9 voitures de sport iconiques",
+                    "difficulty": 3,
+                    "category": "Culture Générale",
+                    "answers": [
+                        { "text": "Ferrari", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Lamborghini", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Porsche 911", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "McLaren", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Bugatti", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Aston Martin", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Lotus", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Koenigsegg", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Tesla Model S", "isCorrect": true, "isTrap": false, "points": 2 }
+                    ]
+                },
+                {
+                    "id": 34,
+                    "theme": "Citez 9 spécialités culinaires italiennes",
+                    "difficulty": 3,
+                    "category": "Gastronomie",
+                    "answers": [
+                        {
+                            "text": "Pasta alla puttanesca",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Osso buco", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Carpaccio", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Bruschetta", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Minestrone", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Polenta", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Vitello tonnato",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        { "text": "Panna cotta", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Paella", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 35,
+                    "theme": "Citez 9 grandes batailles de l'Histoire",
+                    "difficulty": 5,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        { "text": "Waterloo", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Stalingrad", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Austerlitz", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Gettysburg", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Verdun", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Poitiers", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Marathon", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Trafalgar", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Iéna", "isCorrect": true, "isTrap": false, "points": 5 }
+                    ]
+                },
+                {
+                    "id": 36,
+                    "theme": "Citez 9 jeux vidéo les plus vendus de tous les temps",
+                    "difficulty": 4,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "Minecraft", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Tetris", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Grand Theft Auto V",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Super Mario Bros",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "PUBG", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Mario Kart 8", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Red Dead Redemption 2",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "The Witcher 3",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Cyberpunk 2077",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 37,
+                    "theme": "Citez 9 éléments du tableau périodique",
+                    "difficulty": 3,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Hydrogène", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Oxygène", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Carbone", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Azote", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Fer", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Or", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Uranium", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Hélium", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Adamantium", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 38,
+                    "theme": "Citez 9 races de chiens populaires",
+                    "difficulty": 2,
+                    "category": "Culture Générale",
+                    "answers": [
+                        { "text": "Labrador", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Golden Retriever",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Berger Allemand",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Bulldog", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Beagle", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Husky", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Chihuahua", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Dalmatien", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Chat Persan", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 39,
+                    "theme": "Citez 9 films Disney/Pixar célèbres",
+                    "difficulty": 2,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "Le Roi Lion", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Toy Story", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "La Reine des Neiges",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Nemo", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Cars", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Monstres & Cie",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Coco", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Vaiana", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Shrek", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 40,
+                    "theme": "Citez 9 cocktails classiques",
+                    "difficulty": 3,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Mojito", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Margarita", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Cosmopolitan", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Martini", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Daiquiri", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Manhattan", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Negroni", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Old Fashioned",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Virgin Mary", "isCorrect": true, "isTrap": false, "points": 2 }
+                    ]
+                },
+                {
+                    "id": 41,
+                    "theme": "Citez 9 merveilles du monde antique ou moderne",
+                    "difficulty": 4,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        {
+                            "text": "Pyramides de Gizeh",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Muraille de Chine",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Machu Picchu", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Christ Rédempteur",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Colisée", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Taj Mahal", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Pétra", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Chichen Itza", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Tour Eiffel", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 42,
+                    "theme": "Citez 9 compositeurs classiques célèbres",
+                    "difficulty": 4,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        { "text": "Mozart", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Beethoven", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Bach", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Chopin", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Vivaldi", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Debussy", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Tchaikovski", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Brahms", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "John Williams",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 43,
+                    "theme": "Citez 9 sports olympiques d'hiver",
+                    "difficulty": 3,
+                    "category": "Sport",
+                    "answers": [
+                        { "text": "Ski alpin", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Patinage artistique",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Hockey sur glace",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Biathlon", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Curling", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Bobsleigh", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Saut à ski", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Luge", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Surf", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 44,
+                    "theme": "Citez 9 théories scientifiques importantes",
+                    "difficulty": 5,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        {
+                            "text": "Relativité générale",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Évolution", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Big Bang", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Mécanique quantique",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Tectonique des plaques",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Thermodynamique",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Gravitation universelle",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Génétique mendélienne",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        { "text": "Terre plate", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 45,
+                    "theme": "Citez 9 spécialités culinaires asiatiques",
+                    "difficulty": 3,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Sushis", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Pad Thaï", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Ramen", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Dim Sum", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Bibimbap", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Pho", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Tempura", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Satay", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Couscous", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 46,
+                    "theme": "Citez 9 instruments de musique à vent",
+                    "difficulty": 3,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        { "text": "Flûte", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Saxophone", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Trompette", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Clarinette", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hautbois", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Cor", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Tuba", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Piccolo", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Tambour", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 47,
+                    "theme": "Citez 9 métiers du cinéma",
+                    "difficulty": 2,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "Réalisateur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Acteur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Scénariste", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Producteur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Monteur", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Directeur photo",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Ingénieur du son",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Cascadeur", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Libraire", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 48,
+                    "theme": "Citez 9 phobies courantes",
+                    "difficulty": 4,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        {
+                            "text": "Arachnophobie",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Claustrophobie",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Agoraphobie", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Acrophobie", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Ophiophobie", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Hydrophobie", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Trypophobie", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Nyctophobie", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Francophilie", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 49,
+                    "theme": "Citez 9 marques de luxe célèbres",
+                    "difficulty": 2,
+                    "category": "Culture Générale",
+                    "answers": [
+                        {
+                            "text": "Louis Vuitton",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Chanel", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hermès", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Gucci", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Rolex", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Dior", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Cartier", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Prada", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "H&M", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 50,
+                    "theme": "Citez 9 grandes révolutions historiques",
+                    "difficulty": 4,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        {
+                            "text": "Révolution française",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Révolution russe",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Révolution américaine",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Révolution industrielle",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Révolution chinoise",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Révolution cubaine",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Révolution iranienne",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Révolution des Œillets",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Révolution numérique",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        }
+                    ]
+                },
+                {
+                    "id": 51,
+                    "theme": "Citez 9 super-héros Marvel célèbres",
+                    "difficulty": 2,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "Spider-Man", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Iron Man", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Captain America",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Thor", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hulk", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Black Widow", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Doctor Strange",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Wolverine", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Batman", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 52,
+                    "theme": "Citez 9 types de fromages par texture",
+                    "difficulty": 3,
+                    "category": "Gastronomie",
+                    "answers": [
+                        {
+                            "text": "Fromage frais",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Fromage à pâte molle",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Fromage à pâte dure",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Fromage à pâte persillée",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Fromage à pâte pressée",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Fromage fondu",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Fromage de chèvre",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Fromage fumé", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Fromage végétal",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 53,
+                    "theme": "Citez 9 départements français d'outre-mer",
+                    "difficulty": 4,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Guadeloupe", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Martinique", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Guyane", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "La Réunion", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Mayotte", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Saint-Pierre-et-Miquelon",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Wallis-et-Futuna",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Polynésie française",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Monaco", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 54,
+                    "theme": "Citez 9 genres musicaux populaires",
+                    "difficulty": 2,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        { "text": "Pop", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Rock", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hip-Hop", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Jazz", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Blues", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Reggae", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Électro", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Country", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Opéra", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 55,
+                    "theme": "Citez 9 objets qu'on trouve dans une salle de bain",
+                    "difficulty": 1,
+                    "category": "Culture Générale",
+                    "answers": [
+                        {
+                            "text": "Brosse à dents",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Savon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Serviette", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Miroir", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Shampoing", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Peigne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Dentifrice", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Gant de toilette",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Casserole", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 56,
+                    "theme": "Citez 9 sports de raquette",
+                    "difficulty": 3,
+                    "category": "Sport",
+                    "answers": [
+                        { "text": "Tennis", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Badminton", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Ping-pong", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Squash", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Padel", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Tennis de table",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Racquet-ball", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Beach-tennis", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Hockey", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 57,
+                    "theme": "Citez 9 organes du corps humain",
+                    "difficulty": 2,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Cœur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Poumons", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Foie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Cerveau", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Reins", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Estomac", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Intestins", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Pancréas", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Biceps", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 58,
+                    "theme": "Citez 9 moyens de transport",
+                    "difficulty": 1,
+                    "category": "Culture Générale",
+                    "answers": [
+                        { "text": "Voiture", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Train", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Avion", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Bateau", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Vélo", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Bus", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Métro", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Moto", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Ascenseur", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 59,
+                    "theme": "Citez 9 réalisateurs français célèbres",
+                    "difficulty": 4,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        {
+                            "text": "François Truffaut",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Jean-Luc Godard",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Luc Besson", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Claude Lelouch",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Jean Renoir", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Agnès Varda", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Jacques Demy", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Éric Rohmer", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Martin Scorsese",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 60,
+                    "theme": "Citez 9 métaux précieux ou semi-précieux",
+                    "difficulty": 3,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Or", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Argent", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Platine", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Palladium", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Rhodium", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Cuivre", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Titanium", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Iridium", "isCorrect": true, "isTrap": false, "points": 5 },
+                        { "text": "Plastique", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 61,
+                    "theme": "Citez 9 festivals de musique français",
+                    "difficulty": 3,
+                    "category": "Divertissement",
+                    "answers": [
+                        {
+                            "text": "Les Vieilles Charrues",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Rock en Seine",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Festival de Cannes",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        },
+                        { "text": "Solidays", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Francofolies", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Hellfest", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Eurockéennes", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Festival d'Avignon",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Paléo Festival",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        }
+                    ]
+                },
+                {
+                    "id": 62,
+                    "theme": "Citez 9 types de pâtes italiennes",
+                    "difficulty": 2,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Spaghetti", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Penne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Fusilli", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Linguine", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Ravioli", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Tagliatelle", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Gnocchi", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Farfalle", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Couscous", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 63,
+                    "theme": "Citez 9 symboles de la République française",
+                    "difficulty": 3,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        { "text": "Marianne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Drapeau tricolore",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "La Marseillaise",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Coq gaulois", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Liberté Égalité Fraternité",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Faisceau de licteur",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Chêne et olivier",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        { "text": "14 juillet", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Croix de Lorraine",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 64,
+                    "theme": "Citez 9 grandes marques automobiles",
+                    "difficulty": 2,
+                    "category": "Culture Générale",
+                    "answers": [
+                        { "text": "Renault", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Peugeot", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Volkswagen", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Toyota", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "BMW", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Mercedes", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Audi", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Ford", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Samsung", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 65,
+                    "theme": "Citez 9 sports collectifs populaires",
+                    "difficulty": 2,
+                    "category": "Sport",
+                    "answers": [
+                        { "text": "Football", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Basketball", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Volleyball", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Rugby", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Handball", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hockey", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Water-polo", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Baseball", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Golf", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 66,
+                    "theme": "Citez 9 îles françaises célèbres",
+                    "difficulty": 3,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Corse", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Île de Ré", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Belle-Île-en-Mer",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Île d'Oléron", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Île de Noirmoutier",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Île de Bréhat",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        { "text": "Île d'Yeu", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Porquerolles", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Île de Pâques",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 67,
+                    "theme": "Citez 9 légumes de saison d'automne",
+                    "difficulty": 2,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Potiron", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Champignons", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Châtaignes", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Brocolis", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Poireaux", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Navets", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Panais", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Courge butternut",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Pastèque", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 68,
+                    "theme": "Citez 9 mythes et légendes célèbres",
+                    "difficulty": 4,
+                    "category": "Culture Générale",
+                    "answers": [
+                        { "text": "Atlantide", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Roi Arthur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Odyssée", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Pandore", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Icare", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Sisyphe", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Prométhée", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "El Dorado", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Spiderman", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 70,
+                    "theme": "Citez 9 écrivains français du 20ème siècle",
+                    "difficulty": 4,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        {
+                            "text": "Marcel Proust",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Albert Camus", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Jean-Paul Sartre",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Simone de Beauvoir",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "André Malraux",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Marguerite Duras",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Antoine de Saint-Exupéry",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Françoise Sagan",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Charles Dickens",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 71,
+                    "theme": "Citez 9 événements marquants des années 2000",
+                    "difficulty": 3,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        {
+                            "text": "11 septembre 2001",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Tsunami 2004", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Crise financière 2008",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Guerre en Irak",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Élection Obama",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Euro monnaie", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Facebook création",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "iPhone sortie",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Chute du mur de Berlin",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 72,
+                    "theme": "Citez 9 séries TV cultes",
+                    "difficulty": 3,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "Breaking Bad", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Game of Thrones",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Friends", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "The Office", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Stranger Things",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Lost", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "The Wire", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Sherlock", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Harry Potter", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 73,
+                    "theme": "Citez 9 disciplines artistiques",
+                    "difficulty": 2,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        { "text": "Peinture", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Sculpture", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Musique", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Danse", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Théâtre", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Photographie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Architecture", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Gravure", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Cuisine", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 74,
+                    "theme": "Citez 9 catastrophes naturelles",
+                    "difficulty": 3,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        {
+                            "text": "Tremblement de terre",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Tsunami", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Ouragan", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Volcan", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Inondation", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Avalanche", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Tornade", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Sécheresse", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Accident de voiture",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 75,
+                    "theme": "Citez 9 métiers de l'hôtellerie-restauration",
+                    "difficulty": 2,
+                    "category": "Culture Générale",
+                    "answers": [
+                        {
+                            "text": "Chef cuisinier",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Serveur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Réceptionniste",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Barman", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Femme de chambre",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Sommelier", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Concierge", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Maître d'hôtel",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Professeur", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 76,
+                    "theme": "Citez 9 grandes capitales européennes",
+                    "difficulty": 2,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Paris", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Londres", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Berlin", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Rome", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Madrid", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Amsterdam", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Vienne", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Stockholm", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "New York", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 77,
+                    "theme": "Citez 9 explorateurs célèbres",
+                    "difficulty": 4,
+                    "category": "Histoire / Politique",
+                    "answers": [
+                        {
+                            "text": "Christophe Colomb",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Vasco de Gama",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Marco Polo", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Magellan", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Jacques Cartier",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        { "text": "James Cook", "isCorrect": true, "isTrap": false, "points": 3 },
+                        {
+                            "text": "Amerigo Vespucci",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Ernest Shackleton",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Neil Armstrong",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 78,
+                    "theme": "Citez 9 vitamines essentielles",
+                    "difficulty": 4,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "Vitamine C", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Vitamine D", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Vitamine A", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Vitamine E", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Vitamine K", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Vitamine B12", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Vitamine B6", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Acide folique",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        { "text": "Vitamine F", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 79,
+                    "theme": "Citez 9 applications mobiles populaires",
+                    "difficulty": 2,
+                    "category": "Science et Technologie",
+                    "answers": [
+                        { "text": "WhatsApp", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Instagram", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "YouTube", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Spotify", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Uber", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Google Maps", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "TikTok", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Netflix", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Microsoft Word",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 80,
+                    "theme": "Citez 9 grands chefs étoilés français",
+                    "difficulty": 5,
+                    "category": "Gastronomie",
+                    "answers": [
+                        { "text": "Paul Bocuse", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Alain Ducasse",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Joël Robuchon",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Guy Savoy", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Pierre Gagnaire",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Yannick Alléno",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 5
+                        },
+                        {
+                            "text": "Anne-Sophie Pic",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Michel Troisgros",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 5
+                        },
+                        {
+                            "text": "Gordon Ramsay",
+                            "isCorrect": false,
+                            "isTrap": true,
+                            "points": -5
+                        }
+                    ]
+                },
+                {
+                    "id": 81,
+                    "theme": "Citez 9 œuvres de Shakespeare",
+                    "difficulty": 4,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        {
+                            "text": "Roméo et Juliette",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Hamlet", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Macbeth", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Othello", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Le Roi Lear", "isCorrect": true, "isTrap": false, "points": 4 },
+                        {
+                            "text": "Le Songe d'une nuit d'été",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        { "text": "Richard III", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "La Tempête", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Dom Juan", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 82,
+                    "theme": "Citez 9 types de danse populaires",
+                    "difficulty": 3,
+                    "category": "Arts / Littérature",
+                    "answers": [
+                        { "text": "Valse", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Tango", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Salsa", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Hip-hop", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Ballet", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Flamenco", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Breakdance", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Swing", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Karaté", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 83,
+                    "theme": "Citez 9 créatures mythologiques",
+                    "difficulty": 3,
+                    "category": "Culture Générale",
+                    "answers": [
+                        { "text": "Dragon", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Licorne", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Phoenix", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Minotaure", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Griffon", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Sirène", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Centaure", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Hydre", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Pokémon", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 84,
+                    "theme": "Citez 9 sports de combat",
+                    "difficulty": 3,
+                    "category": "Sport",
+                    "answers": [
+                        { "text": "Boxe", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Karaté", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Judo", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Taekwondo", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "MMA", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Aikido", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Muay Thai", "isCorrect": true, "isTrap": false, "points": 4 },
+                        { "text": "Escrime", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Natation", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 85,
+                    "theme": "Citez 9 merveilles architecturales modernes",
+                    "difficulty": 4,
+                    "category": "Géographie / Economie",
+                    "answers": [
+                        { "text": "Burj Khalifa", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Sydney Opera House",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Golden Gate Bridge",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        {
+                            "text": "Guggenheim Bilbao",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Centre Pompidou",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 3
+                        },
+                        {
+                            "text": "Marina Bay Sands",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Fondation Louis Vuitton",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 4
+                        },
+                        {
+                            "text": "Turning Torso",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 5
+                        },
+                        { "text": "Notre-Dame", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                },
+                {
+                    "id": 86,
+                    "theme": "Citez 9 genres cinématographiques",
+                    "difficulty": 2,
+                    "category": "Divertissement",
+                    "answers": [
+                        { "text": "Comédie", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Drame", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Action", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Horreur", "isCorrect": true, "isTrap": false, "points": 2 },
+                        {
+                            "text": "Science-fiction",
+                            "isCorrect": true,
+                            "isTrap": false,
+                            "points": 2
+                        },
+                        { "text": "Thriller", "isCorrect": true, "isTrap": false, "points": 2 },
+                        { "text": "Documentaire", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Western", "isCorrect": true, "isTrap": false, "points": 3 },
+                        { "text": "Cuisine", "isCorrect": false, "isTrap": true, "points": -5 }
+                    ]
+                }
             ]
         }
     ]

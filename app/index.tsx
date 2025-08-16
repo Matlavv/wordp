@@ -4,12 +4,10 @@ import { Linking, SafeAreaView, Text, TouchableOpacity, View } from 'react-nativ
 
 const navigateToGameSettings = () => {
     router.push('/screens/GameSettings');
-    console.log('Navigating to GameSettings');
 };
 
 const navigateToSoloGameSettings = () => {
     router.push('/screens/solo/SoloGameSettings');
-    console.log('Navigating to GameSettings');
 };
 
 const openLinkedInProfile = () => {
@@ -51,12 +49,14 @@ export default function Index() {
                         {'\n'}
                         ⚠️ Attention parfois il y a une réponse piège !{'\n'}
                         {'\n'}
-                        🏆 L'équipe ayant trouvé le plus de mots gagne la partie{'\n'}
+                        🏆 L&apos;équipe ayant trouvé le plus de mots gagne la partie{'\n'}
                         {'\n'}
-                        👥 Quand c'est le tour d'une équipe, l'équipe adverse lit la question{'\n'}
+                        👥 Quand c&apos;est le tour d&apos;une équipe, l&apos;équipe adverse lit la
+                        question{'\n'}
                         {'\n'}
-                        🎶 L'équipe active doit donner ses réponses à voix haute. Lorsqu'une bonne
-                        réponse est donnée, l'équipe adverse doit cocher la réponse dans la liste.
+                        🎶 L&apos;équipe active doit donner ses réponses à voix haute.
+                        Lorsqu&apos;une bonne réponse est donnée, l&apos;équipe adverse doit cocher
+                        la réponse dans la liste.
                         {'\n'}
                     </Text>
                 </View>

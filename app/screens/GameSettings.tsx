@@ -109,7 +109,7 @@ export default function GameSettings() {
         <SafeAreaView className="flex-1 bg-dark-blue">
             <ScrollView className="flex-1">
                 <View className="px-6">
-                    <Text className="text-white font-bold text-4xl text-center mt-14 mb-12">
+                    <Text className="text-white font-bold text-4xl text-center mt-16 mb-12">
                         Paramètres de la partie
                     </Text>
                 </View>
